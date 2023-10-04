@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:webtoon/hal2.dart';
 // import 'package:webtoon/homePage.dart';
 import 'package:webtoon/hal1.dart';
+import 'package:webtoon/hal3.dart';
+import 'package:webtoon/login.dart';
 
 void main() {
   runApp(const Myapp());
@@ -28,6 +30,8 @@ class Myapp extends StatelessWidget {
         routes: {
           '/a': (BuildContext context) => const Hal1(),
           '/b': (BuildContext context) => const Hal2(),
+          '/c': (BuildContext context) => const Hal3(),
+          '/d': (BuildContext context) => Login(),
         });
   }
 }

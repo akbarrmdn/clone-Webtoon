@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 
-class Hal2 extends StatefulWidget {
-  const Hal2({super.key});
+class Hal3 extends StatelessWidget {
+  const Hal3({super.key});
 
-  @override
-  State<Hal2> createState() => _Hal2();
-}
-
-class _Hal2 extends State<Hal2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +23,7 @@ class _Hal2 extends State<Hal2> {
                   ),
                   SizedBox(width: 0),
                   Text(
-                    "Tahap 2 dan 3",
+                    "Tahap 3 dan 3",
                     style: TextStyle(color: Colors.white),
                   ),
                   Spacer(),
@@ -47,11 +42,11 @@ class _Hal2 extends State<Hal2> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
-                    "Pilih gaya gambar",
+                    "Pilih Webtoon yang",
                     style: TextStyle(color: Colors.white, fontSize: 32),
                   ),
                   Text(
-                    "yang kamu suka",
+                    "menarik bagimu",
                     style: TextStyle(color: Colors.white, fontSize: 32),
                   ),
                 ],
@@ -60,7 +55,8 @@ class _Hal2 extends State<Hal2> {
           ),
           SliverGrid(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
+              crossAxisCount: 1,
+              mainAxisExtent: 180.0,
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
@@ -82,11 +78,11 @@ class _Hal2 extends State<Hal2> {
         padding: const EdgeInsets.all(16.0),
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/c');
+            Navigator.pushNamed(context, '/d');
             // Handler saat tombol "Selanjutnya" ditekan
           },
           child: Text(
-            'Selanjutnya',
+            'Selesai',
             style:
                 TextStyle(fontSize: 18), // Ganti dengan gaya teks yang sesuai
           ),
