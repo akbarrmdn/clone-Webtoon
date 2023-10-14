@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:webtoon/daftar.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -12,11 +13,11 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 27, 27, 27),
+        backgroundColor: const Color.fromARGB(255, 27, 27, 27),
         appBar: AppBar(
           elevation: 0.5,
-          backgroundColor: Color.fromARGB(255, 27, 27, 27),
-          title: Center(
+          backgroundColor: const Color.fromARGB(255, 51, 51, 51),
+          title: const Center(
             child: Text(
               'Masuk',
               style: TextStyle(
@@ -27,12 +28,12 @@ class _LoginState extends State<Login> {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.all(16.0),
+          padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextField(
+              const TextField(
                 decoration: InputDecoration(
                   labelText: 'Email',
                   focusedBorder: OutlineInputBorder(
@@ -51,8 +52,8 @@ class _LoginState extends State<Login> {
                       EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
                 ),
               ),
-              SizedBox(height: 16.0), // Spasi antara email dan password
-              TextField(
+              const SizedBox(height: 16.0), // Spasi antara email dan password
+              const TextField(
                 obscureText: true, // Untuk menyembunyikan password
                 decoration: InputDecoration(
                   labelText: 'Password',
@@ -71,19 +72,31 @@ class _LoginState extends State<Login> {
                       EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
                 ),
               ),
-              SizedBox(height: 16.0), // Spasi antara password dan tombol
+              const SizedBox(height: 16.0), // Spasi antara password dan tombol
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Aksi ketika tombol login ditekan
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => RegistrationPage()),
+                      );
                     },
+                    style: ElevatedButton.styleFrom(
+                      primary:
+                          Colors.grey, // Ubah warna tombol sesuai kebutuhan
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(
+                            8), // Ubah bentuk sesuai kebutuhan
+                      ),
+                    ),
                     child: Container(
                       // Menggunakan Container untuk mengatur lebar tombol
                       width: 140, // Ubah lebar sesuai kebutuhan
                       height: 45,
-                      child: Center(
+                      child: const Center(
                         // Untuk mengatur teks di tengah tombol
                         child: Text(
                           'DAFTAR',
@@ -93,23 +106,16 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    style: ElevatedButton.styleFrom(
-                      primary:
-                          Colors.grey, // Ubah warna tombol sesuai kebutuhan
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                            8), // Ubah bentuk sesuai kebutuhan
-                      ),
-                    ),
                   ),
                   ElevatedButton(
                     onPressed: () {
                       // Aksi ketika tombol login ditekan
+                      Navigator.pushNamed(context, '/e');
                     },
                     child: Container(
                       width: 140,
                       height: 45,
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           'LOGIN',
                           style: TextStyle(fontSize: 16),
@@ -117,7 +123,7 @@ class _LoginState extends State<Login> {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.green,
+                      backgroundColor: Colors.green,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -125,18 +131,18 @@ class _LoginState extends State<Login> {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 14,
               ),
-              Center(
+              const Center(
                   child: Text(
                 'Lupa kata sandi?',
                 style: TextStyle(color: Colors.grey),
               )),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
-              Row(
+              const Row(
                 children: [
                   Expanded(
                       child: Divider(
@@ -157,23 +163,42 @@ class _LoginState extends State<Login> {
                   Expanded(child: Divider(color: Colors.grey)),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment
                     .spaceBetween, // Untuk mengatur jarak antara gambar
                 children: [
-                  Image.asset('images/facebook.png', width: 40, height: 40),
-                  Image.asset('images/instagram.png', width: 40, height: 40),
-                  Image.asset('images/line.png', width: 40, height: 40),
-                  Image.asset('images/twitter.png', width: 40, height: 40),
-                  Image.asset('images/apple (1).png', width: 40, height: 40),
+                  Image.asset('images/facebook.png', width: 50, height: 50),
+                  Image.asset('images/instagram.png', width: 55, height: 55),
+                  Image.asset('images/line.png', width: 50, height: 50),
+                  Image.asset('images/twitter.png', width: 50, height: 50),
+                  Image.asset('images/apple (1).png', width: 50, height: 50),
                 ],
               ),
             ],
           ),
         ),
+        bottomNavigationBar: const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Syarat Penggunaan',
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+                Text(
+                  'Webtoon Entertaiment Inc.',
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+                Text(
+                  'Privasi',
+                  style: TextStyle(color: Colors.white, fontSize: 12),
+                ),
+              ],
+            )),
       ),
     );
   }

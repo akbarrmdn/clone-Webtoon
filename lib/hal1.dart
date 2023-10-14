@@ -11,13 +11,13 @@ class _Hal1State extends State<Hal1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 27, 27, 27),
+      backgroundColor: const Color.fromARGB(255, 27, 27, 27),
       body: Container(
-        padding: EdgeInsets.only(top: 45, left: 15, right: 15),
+        padding: const EdgeInsets.only(top: 45, left: 15, right: 15),
         child: Column(
           children: [
             Container(
-              child: Row(
+              child: const Row(
                 children: [
                   Text(
                     "Tahap 1 dan 3",
@@ -31,11 +31,11 @@ class _Hal1State extends State<Hal1> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Container(
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
@@ -49,7 +49,7 @@ class _Hal1State extends State<Hal1> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Column(
@@ -71,7 +71,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -90,7 +90,7 @@ class _Hal1State extends State<Hal1> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -108,7 +108,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -128,7 +128,7 @@ class _Hal1State extends State<Hal1> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -148,7 +148,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -167,7 +167,7 @@ class _Hal1State extends State<Hal1> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -185,7 +185,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -206,7 +206,7 @@ class _Hal1State extends State<Hal1> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -226,7 +226,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -245,7 +245,7 @@ class _Hal1State extends State<Hal1> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -263,7 +263,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -284,7 +284,7 @@ class _Hal1State extends State<Hal1> {
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -304,7 +304,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -323,7 +323,7 @@ class _Hal1State extends State<Hal1> {
                         ],
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10,
                     ),
                     Container(
@@ -341,7 +341,7 @@ class _Hal1State extends State<Hal1> {
                           width: 1.0, // Lebar border
                         ),
                       ),
-                      child: Row(
+                      child: const Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Padding(padding: EdgeInsets.only(left: 20)),
@@ -374,14 +374,14 @@ class _Hal1State extends State<Hal1> {
             Navigator.pushNamed(context, '/b');
             // Handler saat tombol "Selanjutnya" ditekan
           },
-          child: Text(
+          child: const Text(
             'Berikutnya',
             style:
                 TextStyle(fontSize: 18), // Ganti dengan gaya teks yang sesuai
           ),
           style: ElevatedButton.styleFrom(
             primary: Colors.green[300], // Warna latar belakang tombol
-            minimumSize: Size(
+            minimumSize: const Size(
                 double.infinity, 50), // Tombol memenuhi lebar dan tinggi 50
           ),
         ),

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:webtoon/bottomNav.dart';
+import 'package:webtoon/daftar.dart';
 import 'package:webtoon/hal2.dart';
-// import 'package:webtoon/homePage.dart';
+import 'package:webtoon/homePage.dart';
 import 'package:webtoon/hal1.dart';
 import 'package:webtoon/hal3.dart';
+
 import 'package:webtoon/login.dart';
 
 void main() {
@@ -17,21 +20,22 @@ class Myapp extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          textTheme: TextTheme(
+          textTheme: const TextTheme(
             bodyText1: TextStyle(color: Colors.white),
           ),
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             elevation: 0,
             color: Colors.white, // Ubah warna AppBar menjadi putih di sini
             iconTheme: IconThemeData(color: Color.fromRGBO(40, 40, 40, 1)),
           ),
         ),
-        home: Hal1(),
+        home: const Hal1(),
         routes: {
           '/a': (BuildContext context) => const Hal1(),
           '/b': (BuildContext context) => const Hal2(),
           '/c': (BuildContext context) => const Hal3(),
           '/d': (BuildContext context) => Login(),
+          '/e': (BuildContext context) => const MyApp(),
         });
   }
 }

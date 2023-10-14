@@ -11,28 +11,28 @@ class _Hal2 extends State<Hal2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 27, 27, 27),
+      backgroundColor: const Color.fromARGB(255, 27, 27, 27),
       body: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: Container(
               color: Colors.transparent,
-              padding: EdgeInsets.only(top: 30, left: 0, right: 15),
+              padding: const EdgeInsets.only(top: 30, left: 0, right: 15),
               child: Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.arrow_back, color: Colors.white),
+                    icon: const Icon(Icons.arrow_back, color: Colors.white),
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
                   ),
-                  SizedBox(width: 0),
-                  Text(
+                  const SizedBox(width: 0),
+                  const Text(
                     "Tahap 2 dan 3",
                     style: TextStyle(color: Colors.white),
                   ),
-                  Spacer(),
-                  Text(
+                  const Spacer(),
+                  const Text(
                     "Lewati",
                     style: TextStyle(color: Colors.white),
                   ),
@@ -42,8 +42,8 @@ class _Hal2 extends State<Hal2> {
           ),
           SliverToBoxAdapter(
             child: Container(
-              padding: EdgeInsets.only(top: 30, left: 15, right: 15),
-              child: Column(
+              padding: const EdgeInsets.only(top: 30, left: 15, right: 15),
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   Text(
@@ -59,14 +59,14 @@ class _Hal2 extends State<Hal2> {
             ),
           ),
           SliverGrid(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
             ),
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
                 return Padding(
                   padding:
-                      EdgeInsets.symmetric(horizontal: 10.0, vertical: 12.0),
+                      const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12.0),
                   child: ImageCard(
                     imagePath:
                         "images/k${index + 1}.jpg", // Sesuaikan dengan path gambar Anda
@@ -85,14 +85,14 @@ class _Hal2 extends State<Hal2> {
             Navigator.pushNamed(context, '/c');
             // Handler saat tombol "Selanjutnya" ditekan
           },
-          child: Text(
+          child: const Text(
             'Selanjutnya',
             style:
                 TextStyle(fontSize: 18), // Ganti dengan gaya teks yang sesuai
           ),
           style: ElevatedButton.styleFrom(
             primary: Colors.green[300], // Warna latar belakang tombol
-            minimumSize: Size(
+            minimumSize: const Size(
                 double.infinity, 50), // Tombol memenuhi lebar dan tinggi 50
           ),
         ),
