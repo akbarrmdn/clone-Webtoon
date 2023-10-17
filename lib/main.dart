@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:webtoon/bottomNav.dart';
 import 'package:webtoon/daftar.dart';
+import 'package:webtoon/genres.dart';
 import 'package:webtoon/hal2.dart';
 import 'package:webtoon/homePage.dart';
 import 'package:webtoon/hal1.dart';
@@ -21,7 +22,7 @@ class Myapp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           textTheme: const TextTheme(
-            bodyText1: TextStyle(color: Colors.white),
+            bodyLarge: TextStyle(color: Colors.white),
           ),
           appBarTheme: const AppBarTheme(
             elevation: 0,
@@ -36,6 +37,9 @@ class Myapp extends StatelessWidget {
           '/c': (BuildContext context) => const Hal3(),
           '/d': (BuildContext context) => Login(),
           '/e': (BuildContext context) => const MyApp(),
+          '/f': (BuildContext context) => Genres(),
+          '/g': (BuildContext context) => RegistrationPage(),
+          '/h': (BuildContext context) => const HomePage(),
         });
   }
 }

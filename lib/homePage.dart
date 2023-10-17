@@ -1,8 +1,7 @@
-// ignore:
-// ignore_for_file: file_names
-
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+import 'package:webtoon/genres.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -707,19 +706,19 @@ class _HomePage extends State<HomePage> {
                 ],
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.all(14.0),
+            Padding(
+              padding: const EdgeInsets.all(14.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     'Staff Picks',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
                         fontWeight: FontWeight.bold),
                   ),
-                  SingleChildScrollView(
+                  const SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Column(
                       children: [
@@ -761,17 +760,17 @@ class _HomePage extends State<HomePage> {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
-                  Text(
+                  const Text(
                     'Hidden Gems',
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 17,
                         fontWeight: FontWeight.bold),
                   ),
-                  SingleChildScrollView(
+                  const SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Column(
                       children: [
@@ -813,11 +812,396 @@ class _HomePage extends State<HomePage> {
                       ],
                     ),
                   ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  const Text(
+                    'Rising Stars',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CardRow(
+                              title: 'Ayam Pop',
+                              genre: 'Komik 1',
+                              imagePath: 'images/a7.jpg',
+                            ),
+                            CardRow(
+                              title: 'romance',
+                              genre: 'Komik 2',
+                              imagePath:
+                                  'images/a8.jpg', // Ganti dengan path gambar Anda
+                            ),
+                            CardRow(
+                              title: 'action',
+                              genre: 'Komik 3',
+                              imagePath:
+                                  'images/a9.jpg', // Ganti dengan path gambar Anda
+                            ),
+                            CardRow(
+                              title: 'action',
+                              genre: 'Komik 4',
+                              imagePath:
+                                  'images/a10.jpg', // Ganti dengan path gambar Anda
+                            ),
+                            CardRow(
+                              title: 'action',
+                              genre: 'Komik 5',
+                              imagePath:
+                                  'images/a11.jpg', // Ganti dengan path gambar Anda
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  const Text(
+                    'Drama',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            CardRow(
+                              title: 'Drama',
+                              genre: 'Komik 1',
+                              imagePath: 'images/a5.jpg',
+                            ),
+                            CardRow(
+                              title: 'Drama',
+                              genre: 'Komik 2',
+                              imagePath:
+                                  'images/a3.jpg', // Ganti dengan path gambar Anda
+                            ),
+                            CardRow(
+                              title: 'Drama',
+                              genre: 'Komik 3',
+                              imagePath:
+                                  'images/a6.jpg', // Ganti dengan path gambar Anda
+                            ),
+                            CardRow(
+                              title: 'Drama',
+                              genre: 'Komik 4',
+                              imagePath:
+                                  'images/a12.jpg', // Ganti dengan path gambar Anda
+                            ),
+                            CardRow(
+                              title: 'Drama',
+                              genre: 'Komik 5',
+                              imagePath:
+                                  'images/a8.jpg', // Ganti dengan path gambar Anda
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 24,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Genres',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>  Genres()));
+                          },
+                          icon: const Icon(
+                            Icons.chevron_right,
+                            color: Colors.white,
+                          )),
+                    ],
+                  ),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 80.0, // Lebar lingkaran
+                          height: 80.0, // Tinggi lingkaran
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color.fromARGB(255, 39, 39,
+                                39), // Warna latar belakang lingkaran
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.masks, // Ikon yang ingin Anda gunakan
+                              size: 40.0, // Ukuran ikon
+                              color: Colors.white, // Warna ikon
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 80.0, // Lebar lingkaran
+                          height: 80.0, // Tinggi lingkaran
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color.fromARGB(255, 39, 39,
+                                39), // Warna latar belakang lingkaran
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.heat_pump, // Ikon yang ingin Anda gunakan
+                              size: 40.0, // Ukuran ikon
+                              color: Colors.white, // Warna ikon
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 80.0, // Lebar lingkaran
+                          height: 80.0, // Tinggi lingkaran
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color.fromARGB(255, 39, 39,
+                                39), // Warna latar belakang lingkaran
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.face, // Ikon yang ingin Anda gunakan
+                              size: 40.0, // Ukuran ikon
+                              color: Colors.white, // Warna ikon
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 80.0, // Lebar lingkaran
+                          height: 80.0, // Tinggi lingkaran
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color.fromARGB(255, 39, 39,
+                                39), // Warna latar belakang lingkaran
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.favorite, // Ikon yang ingin Anda gunakan
+                              size: 40.0, // Ukuran ikon
+                              color: Colors.white, // Warna ikon
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          width: 80.0, // Lebar lingkaran
+                          height: 80.0, // Tinggi lingkaran
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color.fromARGB(255, 39, 39,
+                                39), // Warna latar belakang lingkaran
+                          ),
+                          child: const Center(
+                            child: Icon(
+                              Icons.star, // Ikon yang ingin Anda gunakan
+                              size: 40.0, // Ukuran ikon
+                              color: Colors.white, // Warna ikon
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14, right: 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Daily',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.chevron_right,
+                        color: Colors.white,
+                      ))
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14, right: 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Ranking',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.chevron_right,
+                        color: Colors.white,
+                      ))
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14, right: 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Genres',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.chevron_right,
+                        color: Colors.white,
+                      ))
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14, right: 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Fan Translation',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.chevron_right,
+                        color: Colors.white,
+                      ))
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 14, right: 14),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Settings',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  IconButton(
+                      onPressed: () {},
+                      icon: const Icon(
+                        Icons.chevron_right,
+                        color: Colors.white,
+                      ))
                 ],
               ),
             ),
             const SizedBox(
-              height: 62,
+              height: 32,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "images/facebook.png",
+                  width: 30,
+                ),
+                const SizedBox(
+                  width: 30,
+                ),
+                Image.asset(
+                  "images/instagram.png",
+                  width: 30,
+                ),
+                const SizedBox(
+                  width: 30,
+                ),
+                Image.asset(
+                  "images/twitter.png",
+                  width: 30,
+                )
+              ],
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.grey, // Warna border hitam
+                    width: 2.0, // Ketebalan border (2.0 px)
+                  ),
+                ),
+                padding: const EdgeInsets.all(
+                    10.0), // Padding untuk memberi ruang antara teks dan border
+                child: const Text(
+                  'Share WEBTOON',
+                  style: TextStyle(fontSize: 14.0, color: Colors.grey),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 100,
             ),
           ],
         ),
