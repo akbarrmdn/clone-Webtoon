@@ -935,7 +935,7 @@ class _HomePage extends State<HomePage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) =>  Genres()));
+                                    builder: (context) => Genres()));
                           },
                           icon: const Icon(
                             Icons.chevron_right,

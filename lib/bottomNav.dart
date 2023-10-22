@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:webtoon/homePage.dart';
+import 'package:webtoon/homepage.dart';
 import 'package:webtoon/page2.dart';
 import 'package:webtoon/page3.dart';
 import 'package:webtoon/page4.dart';
@@ -61,12 +61,12 @@ class _HomePage2State extends State<HomePage2> {
     return Scaffold(
       body: IndexedStack(
         index: selectedIndex,
-        children: const [
-          HomePage(),
+        children: [
+          const HomePage(),
           Page2(),
-          Page3(),
-          Page4(),
-          Page5(),
+          const Page3(),
+          const Page4(),
+          const Page5(),
         ],
       ),
       extendBody: true,

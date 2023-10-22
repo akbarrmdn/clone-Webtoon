@@ -3,7 +3,7 @@ import 'package:webtoon/bottomNav.dart';
 import 'package:webtoon/daftar.dart';
 import 'package:webtoon/genres.dart';
 import 'package:webtoon/hal2.dart';
-import 'package:webtoon/homePage.dart';
+import 'package:webtoon/homepage.dart';
 import 'package:webtoon/hal1.dart';
 import 'package:webtoon/hal3.dart';
 
